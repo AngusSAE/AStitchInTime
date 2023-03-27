@@ -16,9 +16,4 @@ public class WorldSpawner : MonoBehaviour
         currentGlpyh.SpawnGlyphItem('1', new Vector3(1, 0, 1),2, '.');   
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
