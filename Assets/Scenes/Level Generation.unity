@@ -301,14 +301,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843721686}
-  m_LocalRotation: {x: 0.3099752, y: -0.6355434, z: 0.3099752, w: 0.6355434}
-  m_LocalPosition: {x: 12, y: 7, z: 4}
+  m_LocalRotation: {x: 0.4383711, y: 0, z: 0, w: 0.89879405}
+  m_LocalPosition: {x: 5, y: 7, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 52, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 52, y: 0, z: 0}
 --- !u!1 &1076684964
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1076684965}
   m_Layer: 0
-  m_Name: parent
+  m_Name: Floors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,6 +339,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1743702280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1743702281}
+  m_Layer: 0
+  m_Name: Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1743702281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743702280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.3012972, y: -2.9161296, z: 5.770386}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1815836454
 GameObject:
@@ -371,7 +402,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentGlpyh: {fileID: 11400000, guid: 7eaa08a86cf967948aaa1e2e19f26e3d, type: 2}
   currentLevel: {fileID: 4900000, guid: 424898a79f618ce478812cf97fa83bef, type: 3}
-  floorparent: {fileID: 1076684965}
+  floorParent: {fileID: 1076684965}
+  objectParent: {fileID: 1743702281}
 --- !u!4 &1815836456
 Transform:
   m_ObjectHideFlags: 0
