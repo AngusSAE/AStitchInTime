@@ -3,6 +3,9 @@
 11111
 11121
 12111
+.....
+.....
+.....
 *
 /Layer 01
 /Objects t= tree, p = player

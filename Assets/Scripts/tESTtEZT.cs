@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class Textfuie : MonoBehaviour
+public class tESTtEZT : MonoBehaviour
 {
     public Glyph SelectedGlyph;
     public StreamReader sr;
@@ -39,7 +39,7 @@ public class Textfuie : MonoBehaviour
                         string rowTile = layerStrings[y];
                         string rowRot = layerStrings[y+layerStrings.Count/2];
                         for (int x = 0; x < rowTile.Length; ++x) ;
-                        //SelectedGlyph.SpawnGlyphItem(rowTile[x], new Vector3(x, 0, y), layer, rowRot[x]);
+                        //SelectedGlyph.SpawnGlyphItem(rowTile[x], new Vector3(x, 0, y), layer, '.');
 
                         
                     }
