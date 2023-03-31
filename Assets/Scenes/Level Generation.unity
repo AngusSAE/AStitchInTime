@@ -402,8 +402,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentGlpyh: {fileID: 11400000, guid: 7eaa08a86cf967948aaa1e2e19f26e3d, type: 2}
   currentLevel: {fileID: 4900000, guid: 424898a79f618ce478812cf97fa83bef, type: 3}
-  floorParent: {fileID: 1076684965}
-  objectParent: {fileID: 1743702281}
+  floorParent: {fileID: 1076684964}
+  objectParent: {fileID: 1743702280}
 --- !u!4 &1815836456
 Transform:
   m_ObjectHideFlags: 0

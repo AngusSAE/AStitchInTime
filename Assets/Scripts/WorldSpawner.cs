@@ -7,8 +7,8 @@ public class WorldSpawner : MonoBehaviour
 {
     [SerializeField] protected Glyph currentGlpyh;
     [SerializeField] protected TextAsset currentLevel;
-    [SerializeField] protected Transform floorParent;
-    [SerializeField] protected Transform objectParent;
+    [SerializeField] protected GameObject floorParent;
+    [SerializeField] protected GameObject objectParent;
 
     // Start is called before the first frame update
     void Start()
@@ -53,13 +53,13 @@ public class WorldSpawner : MonoBehaviour
 
                 else if(mychars[i] == '1')
                 {
-                    currentGlpyh.SpawnGlyphItem('1', new Vector3(x, 0, z), layer, '.', floorParent);
+                    currentGlpyh.SpawnGlyphItem('1', new Vector3(x, 0, z), layer, '.', floorParent.transform);
                     z++;
                     Debug.Log("Hello Bailey");
                 }
                 else if (mychars[i] == '2')
                 {
-                    currentGlpyh.SpawnGlyphItem('2', new Vector3(x, 0, z), layer, '.', floorParent);
+                    currentGlpyh.SpawnGlyphItem('2', new Vector3(x, 0, z), layer, '.', floorParent.transform);
                     z++;
                     Debug.Log("Hello Matt!");
                 }
@@ -73,13 +73,13 @@ public class WorldSpawner : MonoBehaviour
 
                 else if (mychars[i] == 't')
                 {
-                    currentGlpyh.SpawnGlyphItem('t', new Vector3(x, 0, z), layer, '.', objectParent);
+                    currentGlpyh.SpawnGlyphItem('t', new Vector3(x, 0, z), layer, '.', objectParent.transform);
                     z++;
                     Debug.Log("Hello Nat");
                 }
                 else if (mychars[i] == 'p')
                 {
-                    currentGlpyh.SpawnGlyphItem('p', new Vector3(x, 0, z), layer, '.', objectParent);
+                    currentGlpyh.SpawnGlyphItem('p', new Vector3(x, 0, z), layer, '.', objectParent.transform);
                     z++;
                     Debug.Log("Hello Bridget!");
                 }
@@ -88,6 +88,28 @@ public class WorldSpawner : MonoBehaviour
 
 
 
+    }
+
+    public void NoMap()
+    {
+        int objectChildren = objectParent.transform.childCount;
+        int floorChildren = floorParent.transform.childCount;
+
+        for (int i = objectChildren - 1; i >= 0; i--)
+        {
+            DestroyImmediate(objectParent.transform.GetChild(i).gameObject);
+
+        }
+
+        for (int i = floorChildren - 1; i >= 0; i--)
+        {
+            DestroyImmediate(floorParent.transform.GetChild(i).gameObject);
+
+        }
+    }
+    public void SpawnAgain()
+    {
+        Start();
     }
 
 }
