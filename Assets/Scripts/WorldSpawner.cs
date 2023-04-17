@@ -92,6 +92,12 @@ public class WorldSpawner : MonoBehaviour
                         //z++;
                         Debug.Log("Hello Bridget!");
                     }
+                    else if (mychars[x] == 'n')
+                    {
+                        currentGlpyh.SpawnGlyphItem('n', new Vector3(x, 0, z), layer, rotation, objectParent.transform);
+                        //z++;
+                        Debug.Log("Hello Bridget!");
+                    }
                 }
             }
             z++;

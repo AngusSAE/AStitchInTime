@@ -26,6 +26,9 @@ MonoBehaviour:
   - glyphCharacter: 116
     objectToSpawn: {fileID: 172822177179989240, guid: 5c9b219563e7107439513d3c299b7646, type: 3}
     worldOffset: {x: 0, y: 0, z: 0}
+  - glyphCharacter: 110
+    objectToSpawn: {fileID: 5336290898516712944, guid: 90c7a5e18e281514d9ebacdd12369845, type: 3}
+    worldOffset: {x: 0, y: 0, z: 0}
   glyphRotationData:
   - glyphCharacter: 62
     eulerRotation: {x: 0, y: 90, z: 0}
