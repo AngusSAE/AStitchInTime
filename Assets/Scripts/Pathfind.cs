@@ -22,72 +22,46 @@ public class Node
 
 public class Pathfind : MonoBehaviour
 {
-    public static int GridWidth = 16;
-    public static int GridHeight = 16;
+    public static int GridWidth = 9;
+    public static int GridHeight = 11;
     public static float CellSize = 1.0f;
     public static List<Vector2Int> openNodes = new List<Vector2Int>();
 
 
     public static Node[,] Nodes;
     public bool diagonal;
-    public Material groundMat;
-    static Texture2D tex;
+    //public Material groundMat;
+    //static Texture2D tex;
     static Pathfind pathfind; 
     // Start is called before the first frame update
 
-    public static void setWall(int x, int y, bool wall)
+    public static void SetWall(int x, int y, bool wall)
     {
+        if(Nodes == null)
+        {
+            Nodes = new Node[GridHeight, GridWidth];
+        }
         Nodes[y, x].Wall = wall;
     }
-
-    void Start()
+    void Awake()
     {
         pathfind = this;
-        string[] mapData = { 
-            "****************",
-            "*..............*",
-            "*..............*",
-            "*.........*....*",
-            "*.....****.....*",
-            "*.....*........*",
-            "*.....*........*",
-            "*.....*........*",
-            "*.....******...*",
-            "*.....*........*",
-            "*..............*",
-            "*.....*****....*",
-            "*.....*****....*",
-            "*..............*",
-            "*..............*",
-            "****************",
-        };
 
-        tex = new Texture2D(GridWidth, GridHeight);
-        tex.filterMode = FilterMode.Point;
-        groundMat.SetTexture("_MainTex", tex);
-
-        Nodes = new Node[GridHeight, GridWidth];
-
+        //tex = new Texture2D(GridWidth, GridHeight);
+        //tex.filterMode = FilterMode.Point;
+        //groundMat.SetTexture("_MainTex", tex);
+        if (Nodes == null)
+        {
+            Nodes = new Node[GridHeight, GridWidth];
+        }
         for (int y = 0; y < GridHeight; ++y)
         {
             for (int x = 0; x < GridWidth; ++x)
             {
                 Nodes[y, x] = new Node();
-
-                // Don't do this, the loading will set walls
-                if (mapData[y][x] == '*')
-                {
-                    Nodes[y, x].Wall = true;
-                    tex.SetPixel(x, y, Color.red);
-                }
-                else
-                {
-                    Nodes[y, x].Wall = false;
-                    tex.SetPixel(x, y, Color.black);
-                }
             }
         }
-        tex.Apply();
+        //tex.Apply();
     }
 
     // Update is called once per frame
@@ -216,26 +190,26 @@ public class Pathfind : MonoBehaviour
                 }
                 path.Add(start);
 
-                for (int y = 0; y < GridHeight; ++y)
-                {
-                    for (int x = 0; x < GridWidth; ++x)
-                    {
-                        if (GetNode(new Vector2Int(x, y)).state == Node.State.None && !GetNode(new Vector2Int(x, y)).Wall)
-                        {
-                            tex.SetPixel(x, y, Color.black);
-                        }
-                        if (GetNode(new Vector2Int(x, y)).state == Node.State.Open)
-                        {
-                            tex.SetPixel(x, y, Color.blue);
-                        }
-                        if (GetNode(new Vector2Int(x, y)).state == Node.State.Closed)
-                        {
-                            tex.SetPixel(x, y, Color.yellow * (GetNode(new Vector2Int(x, y)).G/24.0f));
-                        }
+                //for (int y = 0; y < GridHeight; ++y)
+                //{
+                //    for (int x = 0; x < GridWidth; ++x)
+                //    {
+                //        if (GetNode(new Vector2Int(x, y)).state == Node.State.None && !GetNode(new Vector2Int(x, y)).Wall)
+                //        {
+                //            tex.SetPixel(x, y, Color.black);
+                //        }
+                //        if (GetNode(new Vector2Int(x, y)).state == Node.State.Open)
+                //        {
+                //            tex.SetPixel(x, y, Color.blue);
+                //        }
+                //        if (GetNode(new Vector2Int(x, y)).state == Node.State.Closed)
+                //        {
+                //            tex.SetPixel(x, y, Color.yellow * (GetNode(new Vector2Int(x, y)).G/24.0f));
+                //        }
 
-                    }
-                }
-                tex.Apply();
+                //    }
+                //}
+                //tex.Apply();
                 return path;
             }
             
