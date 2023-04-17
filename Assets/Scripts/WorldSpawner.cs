@@ -9,6 +9,7 @@ public class WorldSpawner : MonoBehaviour
     [SerializeField] protected TextAsset currentLevel;
     [SerializeField] protected GameObject floorParent;
     [SerializeField] protected GameObject objectParent;
+    //[SerializeField] protected Pathfind paths;
 
     // Start is called before the first frame update
     void Start()
@@ -65,12 +66,15 @@ public class WorldSpawner : MonoBehaviour
                         currentGlpyh.SpawnGlyphItem('1', new Vector3(x, 0, z), layer, rotation, floorParent.transform);
                         //z++;
                         Debug.Log("Hello Bailey");
+                        
                     }
                     else if (mychars[x] == '2')
                     {
                         currentGlpyh.SpawnGlyphItem('2', new Vector3(x, 0, z), layer, rotation, floorParent.transform);
                         //z++;
-                        Debug.Log("Hello Matt!");
+                        //Debug.Log("Hello Matt!");
+                        Debug.Log(x + " " + z);
+                        Pathfind.SetWall(x, z, true);
                     }
                     else if (mychars[x] == '?')
                     {
@@ -85,6 +89,7 @@ public class WorldSpawner : MonoBehaviour
                         currentGlpyh.SpawnGlyphItem('t', new Vector3(x, 0, z), layer, rotation, objectParent.transform);
                         //z++;
                         Debug.Log("Hello Nat");
+                        Pathfind.SetWall(x, z, true);
                     }
                     else if (mychars[x] == 'p')
                     {
