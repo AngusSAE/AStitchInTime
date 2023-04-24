@@ -46,7 +46,7 @@ public class NPC : MonoBehaviour
                 transform.position.y, 
                 Path[Path.Count - 1].y + Pathfind.CellSize * 0.5f);
             GetComponent<Rigidbody>().velocity = (target - transform.position).normalized * 8.0f;
-
+            Debug.LogError("moving");
             if(Vector3.Distance(transform.position-new Vector3(0, transform.position.y, 0), target)<0.1f)
             {
                 Path.RemoveAt(Path.Count - 1);

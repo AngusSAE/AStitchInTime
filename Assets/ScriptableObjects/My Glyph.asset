@@ -16,19 +16,19 @@ MonoBehaviour:
   glyphItems:
   - glyphCharacter: 112
     objectToSpawn: {fileID: 5336290898516712944, guid: 621c8d78b514c7c469abd54c69cb8836, type: 3}
-    worldOffset: {x: 0.5, y: 0, z: 0.5}
+    worldOffset: {x: 0.5, y: -0.5, z: 0.5}
   - glyphCharacter: 49
     objectToSpawn: {fileID: 8110230564019946544, guid: ddd5b2f3bd2db8f4db8c6ff5445542d9, type: 3}
-    worldOffset: {x: 0.5, y: -0.5, z: 0.5}
+    worldOffset: {x: 0.5, y: -1, z: 0.5}
   - glyphCharacter: 50
     objectToSpawn: {fileID: 1390771967474167613, guid: f13580f3a545a8b4b9d43ec1f8a6debb, type: 3}
-    worldOffset: {x: 0.5, y: -0.5, z: 0.5}
+    worldOffset: {x: 0.5, y: -1, z: 0.5}
   - glyphCharacter: 116
     objectToSpawn: {fileID: 172822177179989240, guid: 5c9b219563e7107439513d3c299b7646, type: 3}
-    worldOffset: {x: 0.5, y: -0.5, z: 0.5}
+    worldOffset: {x: 0.5, y: -1, z: 0.5}
   - glyphCharacter: 110
     objectToSpawn: {fileID: 5336290898516712944, guid: 90c7a5e18e281514d9ebacdd12369845, type: 3}
-    worldOffset: {x: 0.5, y: 0, z: 0.5}
+    worldOffset: {x: 0.5, y: -0.5, z: 0.5}
   glyphRotationData:
   - glyphCharacter: 62
     eulerRotation: {x: 0, y: 90, z: 0}
