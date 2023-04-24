@@ -42,6 +42,7 @@ public class Pathfind : MonoBehaviour
             Nodes = new Node[GridHeight, GridWidth];
         }
         Nodes[y, x].Wall = wall;
+        Debug.Log(Nodes);
     }
     void Awake()
     {
