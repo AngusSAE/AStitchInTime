@@ -74,7 +74,7 @@ public class WorldSpawner : MonoBehaviour
                         //z++;
                         //Debug.Log("Hello Matt!");
                         Debug.Log(x + " " + z);
-                        Pathfind.SetWall(x, z, true);
+                        //Pathfind.SetWall(x, z, true);
                     }
                     else if (mychars[x] == '?')
                     {
@@ -89,7 +89,7 @@ public class WorldSpawner : MonoBehaviour
                         currentGlpyh.SpawnGlyphItem('t', new Vector3(x, 0, z), layer, rotation, objectParent.transform);
                         //z++;
                         Debug.Log("Hello Nat");
-                        Pathfind.SetWall(x, z, true);
+                        //Pathfind.SetWall(x, z, true);
                     }
                     else if (mychars[x] == 'p')
                     {

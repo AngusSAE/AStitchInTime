@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+#if UNITY_EDITOR
+
 [CustomEditor(typeof(WorldSpawner))]
 public class WorldSpawnerEditor : Editor
 {
-
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
@@ -25,3 +26,5 @@ public class WorldSpawnerEditor : Editor
         }
     }
 }
+
+#endif
